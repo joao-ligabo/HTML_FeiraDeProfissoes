@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição - Feira de Profissões 2025</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    fieldset { margin-bottom: 15px; padding: 15px; }
+    legend { font-weight: bold; }
+    label { display: block; margin-top: 8px; }
+    .top-link { margin-bottom: 20px; display: inline-block; }
+    table { border-collapse: collapse; width: 100%; margin-top: 30px; }
+    th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+    th { background: #eee; }
+  </style>
+</head>
+<body>
+
+  <h1>Inscrição para Feira de Profissões 2025</h1>
+  <p>Preencha o formulário abaixo para participar das palestras e workshops da Feira de Profissões 2025.</p>
+
+  <!-- Link interno para pular direto pra mensagem -->
+  <a class="top-link" href="#mensagem">Ir para o campo de mensagem</a>
+
+  <form method="post" action="#">
+    
+    <!-- Dados pessoais -->
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+      
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required minlength="5" maxlength="100">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" 
+             pattern="\(\d{2}\)\d{5}-\d{4}" 
+             title="Formato esperado: (XX)XXXXX-XXXX" required>
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf"
+             pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" 
+             title="Formato esperado: 000.000.000-00">
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep"
+             pattern="\d{5}-\d{3}" 
+             title="Formato esperado: 00000-000">
+    </fieldset>
+
+    <!-- Campo de mensagem -->
+    <fieldset>
+      <legend>Mensagem</legend>
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" required minlength="10"></textarea>
+    </fieldset>
+
+    <!-- Interesses -->
+    <fieldset>
+      <legend>Preferências</legend>
+      
+      <label for="area">Área de Interesse:</label>
+      <select id="area" name="area" required>
+        <option value="">Selecione</option>
+        <option value="tecnologia">Tecnologia</option>
+        <option value="saude">Saúde</option>
+        <option value="engenharia">Engenharia</option>
+      </select>
+
+      <p>Turno Preferido:</p>
+      <label><input type="radio" name="turno" value="manha" required> Manhã</label>
+      <label><input type="radio" name="turno" value="tarde"> Tarde</label>
+      <label><input type="radio" name="turno" value="noite"> Noite</label>
+
+      <p>Interesses:</p>
+      <label><input type="checkbox" name="interesse" value="palestras"> Palestras</label>
+      <label><input type="checkbox" name="interesse" value="workshops"> Workshops</label>
+      <label><input type="checkbox" name="interesse" value="networking"> Networking</label>
+    </fieldset>
+
+    <!-- Upload -->
+    <fieldset>
+      <legend>Arquivo</legend>
+      <label for="arquivo">Envie suas dúvidas ou sugestões (PDF):</label>
+      <input type="file" id="arquivo" name="arquivo" accept=".pdf">
+    </fieldset>
+
+    <!-- Botões -->
+    <button type="submit">Enviar</button>
+    <button type="reset">Limpar</button>
+  </form>
+
+  <!-- Tabela de exemplos -->
+  <h2>Exemplos de Profissões e Palestras</h2>
+  <table>
+    <tr>
+      <th>Profissão</th>
+      <th>Palestra</th>
+      <th>Turno</th>
+    </tr>
+    <tr>
+      <td>Engenheiro de Software</td>
+      <td>Carreira em Tecnologia</td>
+      <td>Manhã</td>
+    </tr>
+    <tr>
+      <td>Médico</td>
+      <td>Avanços na Saúde</td>
+      <td>Tarde</td>
+    </tr>
+    <tr>
+      <td>Engenheiro Civil</td>
+      <td>Construção Sustentável</td>
+      <td>Noite</td>
+    </tr>
+  </table>
+
+</body>
+</html>
